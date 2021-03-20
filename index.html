@@ -14,10 +14,11 @@
   </heder>
 
     <section id="placar">
-      <span id="placarMsg">Esse é Seu Placar trybe</span>
+      <span id="rgb"> </span>
+      <span id="score"></span>
     </section>
 
-    <section>
+    <section id="containerBall">
       <div class="ball"></div>
       <div class="ball"></div>
       <div class="ball"></div>
@@ -31,23 +32,15 @@
     </section>
 
     <section="btn">
-      <button id ="dificuldade" type="button">difuculdade</button>
-      <button id ="reset-gueme" type="button">reset-gueime</button>
-
+      <button id ="dificuldade" type="button">Mudar dificuldade</button>
+      <button id ="reset-gueme" onclick ="btnReset()" type="button">reset-gueime</button>
     </section>
 
     <div>
-      <p align="center">
-        <img
-        class="rounded mx-auto d-block"
-        src="/guess-the-color.gif"
-        alt="Gif exibindo um jogo de adivinhar a cor"
-        >
+      <p align ="center">
+        <img class="rounded mx-auto d-block" src="/guess-the-color.gif" alt="Gif exibindo um jogo de adivinhar a cor">
       </p>
     </div>
-
-
-
 
   <script src="script.js"></script>
 </body>
