@@ -1,14 +1,14 @@
 const pushColorSpan = document.querySelector('#rgb');
-const msgSpan = document.querySelector('#rgb');
+const msgSpan = document.querySelector('#rgb-color');
 let scoreSpan = document.querySelector('#score');
 const answer = document.querySelector('#answer');
 
 let clickRgb;
 let teste = '';
 let scoreSpanCount = 0;
-scoreSpan.innerHTML = scoreSpanCount;
+scoreSpan.innerHTML = `Placar: ${scoreSpanCount}`;
 
-answer.innerHTML = "Escolha uma cor";
+answer.innerHTML = 'Escolha uma cor';
 
 function rgb() {
   const r = Math.ceil(Math.random() * 255);
@@ -29,8 +29,9 @@ function btnReset() {
   }
   rgbAleatorio = Math.floor(Math.random() * 6);
   teste = getRgbRandom[rgbAleatorio];
+  teste = teste.replace(/rgb/gi, '');
   msgSpan.innerHTML = teste;
-  answer.innerHTML = "Escolha uma cor";
+  answer.innerHTML = 'Escolha uma cor';
 
 }
 
@@ -42,6 +43,7 @@ function getClickRgb () {
   containerBall.addEventListener('click', (event) => {
   event.target.style.backgroundColor;
   clickRgb = event.target.style.backgroundColor;
+  clickRgb = clickRgb.replace(/rgb/gi, '');
   console.log(event.target.style.backgroundColor);
   checkClick();
   })
