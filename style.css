@@ -1,15 +1,82 @@
+#title{
+  text-align: center;
+  background-color:rgb(7, 67, 172);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px
+}
+
+#score {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100px;
+  background: rgb(7, 67, 172);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px
+
+
+}
+
+#rgb {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
 .ball {
   display: inline-block;
   border: 2px solid rgb(148, 134, 134);
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  margin-left: 10px;
 }
 
-#placar{
-  display:flex;
-  flex-direction:column;
+#placar {
+  display: flex;
+  flex-direction: column;
   /* justify-content: center; */
-  text-align: start;
+  text-align: center;
   padding: 20px;
-  border: 2px solid  rgb(185, 174, 174);
+  /* border: 3px solid  blue; */
+  margin-bottom: 50px;
+  /* text-align: center; */
+  align-items: center;
+
+}
+
+#containerBall {
+  text-align: center;
+
+}
+
+#mensagens{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: xx-large;
+
+}
+
+#btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button{
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius:10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color:rgb(27, 11, 156)
+}

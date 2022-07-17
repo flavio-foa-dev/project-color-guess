@@ -1,6 +1,5 @@
-const pushColorSpan = document.querySelector('#rgb');
 const msgSpan = document.querySelector('#rgb-color');
-let scoreSpan = document.querySelector('#score');
+const scoreSpan = document.querySelector('#score');
 const answer = document.querySelector('#answer');
 
 let clickRgb;
@@ -17,6 +16,7 @@ function rgb() {
 
   return `rgb(${r}, ${g}, ${b})`;
 }
+
 let rgbAleatorio;
 let getRgbRandom = [];
 function btnReset() {
@@ -32,33 +32,35 @@ function btnReset() {
   teste = teste.replace(/rgb/gi, '');
   msgSpan.innerHTML = teste;
   answer.innerHTML = 'Escolha uma cor';
-
 }
-
 btnReset();
 
+function checkClick() {
+  if (clickRgb === teste) {
+    scoreSpanCount += 3;
+    answer.innerHTML = 'Acertou!';
+    scoreSpan.innerText = scoreSpanCount;
+    console.log('acertei');
+    setTimeout(() => {
+      btnReset();
+    }, 1000);
+  }
+  if (clickRgb !== teste) {
+    answer.innerHTML = 'Errou! Tente novamente!';
+    console.log('errei');
+    setTimeout(() => {
+      btnReset();
+    }, 1000);
+  }
+}
 
-function getClickRgb () {
+function getClickRgb() {
   const containerBall = document.querySelector('#containerBall');
   containerBall.addEventListener('click', (event) => {
-  event.target.style.backgroundColor;
-  clickRgb = event.target.style.backgroundColor;
-  clickRgb = clickRgb.replace(/rgb/gi, '');
-  console.log(event.target.style.backgroundColor);
-  checkClick();
-  })
+    clickRgb = event.target.style.backgroundColor;
+    clickRgb = clickRgb.replace(/rgb/gi, '');
+    console.log(event.target.style.backgroundColor);
+    checkClick();
+  });
 }
-getClickRgb  ();
-
-function checkClick() {
-  if (clickRgb == teste){
-    scoreSpanCount = scoreSpanCount + 3;
-   answer.innerHTML = 'Acertou!';
-   scoreSpan.innerText = scoreSpanCount;
-   console.log('acertei');
- }
-  if (clickRgb !== teste){
-   answer.innerHTML = 'Errou! Tente novamente!';
-   console.log('errei');
- }
-}
+getClickRgb();
